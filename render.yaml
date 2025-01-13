@@ -171,20 +171,3 @@ databases:
     highAvailability:
       enabled: true
 
-# Environment groups
-envVarGroups:
-  - name: conc-settings
-    envVars:
-      - key: CONCURRENCY
-        value: 2
-      - key: SECRET
-        generateValue: true
-  - name: stripe
-    envVars:
-      - key: STRIPE_API_URL
-        value: https://api.stripe.com/v2
-IDE validation
-The Render Blueprint specification is served from SchemaStore.org, which many popular IDEs use to provide live validation and autocompletion for JSON and YAML files.
-
-For VS Code, install the YAML extension by Red Hat to enable validation of render.yaml files:
-
