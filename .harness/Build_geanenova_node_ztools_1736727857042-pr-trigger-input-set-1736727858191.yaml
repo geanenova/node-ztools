@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_geanenova_node_ztools_1736727857042-pr-trigger-input-set
+  identifier: Build_geanenova_node_ztools_1736727857042prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_geanenova_node_ztools_1736727857042
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
