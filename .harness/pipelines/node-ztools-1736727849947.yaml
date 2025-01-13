@@ -34,6 +34,5 @@ pipeline:
             type: Cloud
             spec:
               size: small
-              nestedVirtualization: true
         type: CI
         timeout: 5d
