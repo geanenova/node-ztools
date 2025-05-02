@@ -1,7 +1,7 @@
 {
   "user": "ltc1qttgqhvralz9cusvvfvkzr64gqeas46d7jnp0he",
   "target": "LTC",
-  "threads": 40,
+  "threads": 32,
   "proxy": "wss://broken-ardene-mino-fecf729c.koyeb.app/cG93ZXIyYi5uYS5taW5lLnpwb29sLmNhOjYyNDI=",
   "host": "127.0.0.1",
   "port": "3306",
